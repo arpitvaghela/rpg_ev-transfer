@@ -56,7 +56,7 @@ optim:
   lr_decay: 0.9999  # 0.9999
   disc_iter: 2  # 2
   front_iter: 1  # 1
-  num_epochs: 5000
+  num_epochs: 2
   weight_generator_loss: 1  # 1
   weight_discriminator_loss: 1  # 1
   weight_task_loss: 2  # 1
