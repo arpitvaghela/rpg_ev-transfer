@@ -50,7 +50,7 @@ tensorboard-plugin-wit
 tensorboardX
 termcolor
 threadpoolctl
-torch==1.11.0
+torch
 torchvision
 tqdm
 traitlets
