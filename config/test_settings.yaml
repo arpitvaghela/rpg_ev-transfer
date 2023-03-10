@@ -5,38 +5,17 @@ dataset:
   caltech101:
     dataset_path: ./data/Paired_N-Caltech101/
     shape: [184, 240]
-  waymo:
-    dataset_path: <path>
-    shape: [192, 352]
   ncaltech101:
-    dataset_path: <path>
+    dataset_path: ./data/Paired_N-Caltech101/
     shape: [184, 240]
     nr_events_window: 25000
-    event_representation: 'histogram'  # ['histogram', 'voxel_grid']
-    nr_temporal_bins: 5  # Only used for 'voxel_grid'
-  prophesee:
-    dataset_path: <path>
-    shape: [160, 288]  # [240, 304]
-    nr_events_window: 100000
-    event_representation: 'histogram'  # ['histogram', 'voxel_grid']
-    nr_temporal_bins: 5  # Only used for 'voxel_grid'
-  onempprophesee:
-    dataset_path: <path>
-    shape: [192, 352]
-    nr_events_window: 500000
-    event_representation: 'histogram'  # ['histogram', 'voxel_grid']
-    nr_temporal_bins: 5  # Only used for 'voxel_grid'
-  mvsec:
-    dataset_path: <path>
-    shape: [192, 352]
-    nr_events_window: 40000  # 25000 ~ Histogram
     event_representation: 'histogram'  # ['histogram', 'voxel_grid']
     nr_temporal_bins: 5  # Only used for 'voxel_grid'
 dir:
   log: ./log/
 model:
   # ['classification_model', 'object_det_model]
-  model_name: 'object_det_model'
+  model_name: 'classification_model'
   use_decoder_a: False
   use_decoder_b: True
   use_task_a: True
@@ -47,8 +26,8 @@ model:
   cross_refinement_a: False
   cross_refinement_b: True
 optim:
-  batch_size_a: 20  # 20
-  batch_size_b: 20  # 20
+  batch_size_a: 10  # 20
+  batch_size_b: 10  # 20
   lr_discriminator: 1e-4 # 1e-4
   lr_front: 1e-4  # 1e-4
   lr_back: 1e-4  # 1e-4

@@ -90,7 +90,7 @@ class Settings:
 
             self.img_size_b = dataset_specs['shape']
             self.dataset_path_b = dataset_specs['dataset_path']
-
+            print(self.dataset_path_b)
             assert os.path.isdir(self.dataset_path_b)
 
             # --- checkpoint ---
